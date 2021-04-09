@@ -1,21 +1,160 @@
 %!
 
-/Namecard{
-NameCardLine
-0 500 translate NameCardLine
-}
+% def
+/height 141.732 def
+/width 255.118 def
 
+%한개의 명함
+/Namecard{
+	NameCardLine		
+	sea
+	cloud1
+	cloud2
+	gsave
+	width 2 div 30 translate
+	sunshines
+	1 0.5 0 sun	
+	suns
+	grestore
+	title
+	name
+		
+} def
+
+%명함 그리기
+/PrintCard{	
+	%NameCard * 6 그리기
+	0 1 2 {
+	/i exch def
+	gsave
+	0 i 200 mul translate Namecard
+	300 0 translate Namecard
+	grestore
+	}
+	for
+	
+} def
 
 %명함의 외부 테두리
 /NameCardLine{
-0 0 moveto
-255.118 0 lineto
-255.118 141.732 lineto
-0 141.732 lineto
-closepath
-stroke}
-def
+	gsave
+	0 0 moveto
+	width 0 lineto
+	width height lineto
+	0 height lineto
+	closepath
+	0 setgray
+	2 setlinewidth
+	stroke
+	
+	0 0 moveto
+	width 0 lineto
+	width height lineto
+	0 height lineto
+	closepath
+	0 0.8 0.95 setrgbcolor
+	fill
+	grestore
+} def
 
-NameCardLine
+%Postscript Programmer 쓰기
+/title {
+	/Calibri findfont 10 scalefont setfont
+	 width 2 div height 2 div 5 add moveto
+	(Postscript Programmer) dup stringwidth pop 2 div neg 0 rmoveto show
+	stroke
+} def
 
+% 이름 쓰기 
+/name {
+	/Calibri findfont 9 scalefont setfont
+	width 2 div height 2 div 7 sub moveto 
+	(JunYeop Na) dup stringwidth pop 2 div neg 0 rmoveto show
+	stroke
+} def
+
+% 땅 그림
+/sea{
+	gsave
+	0 1 2 {
+		/i exch def
+	
+		0.5 0 moveto
+		width 0.5 sub 0 lineto
+		width 0.5 sub 10  lineto
+		0.5 10 lineto
+		closepath
+
+		0 i 0.3 mul i 0.5 mul setrgbcolor
+		fill	
+	
+		0 i 10 mul translate 
+		} for
+	grestore
+}def
+
+
+/sun{
+	gsave
+	%width 2 div 30 translate	
+	newpath
+	0 0 20 -20 200 arc
+	setrgbcolor
+	fill
+	
+	grestore
+
+} def
+
+/suns{
+	gsave
+	0.7 0.7 scale 1 0.65 0 sun
+	0.7 0.7 scale 1 0.9 0 sun
+	grestore
+}def
+
+
+/sunshine{
+	-1 0 moveto
+	0 100 lineto
+	1 0 lineto
+	0.9 0.9 0.9 setrgbcolor
+	fill
+	%0 10 360{ gsave rotate 0 0 moveto  
+	
+} def
+
+/sunshines{
+gsave
+0 1 48 { gsave 2 mul rotate 0 10 translate sunshine grestore } for
+0 1 48 { gsave -2 mul rotate 0 10 translate sunshine grestore } for
+grestore
+} def
+
+/cloud{	
+	0 0 10 0 180 arc
+	1 1 1 setrgbcolor
+	fill
+} def
+
+/cloud1{
+gsave
+200 100 translate cloud
+15 0 translate cloud
+15 0 translate cloud
+grestore
+}def
+
+/cloud2{
+gsave
+25 80 translate cloud
+15 0 translate cloud
+grestore
+}def
+
+
+
+%명함 그리기
+
+PrintCard
 showpage
