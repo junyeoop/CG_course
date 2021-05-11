@@ -19,8 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e9c3137-6827-4716-a27a-f0bf5c283a8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4bd8873a-8f16-4722-89ab-bd55a6991dcb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lab07/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab07/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1rxq7vyWqLbAJHRzFK3MabgkrEo" />
+  <component name="ProjectId" id="1s99rXZCp8HwXWRluj0X0xtIH7I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,12 +44,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8e9c3137-6827-4716-a27a-f0bf5c283a8a" name="Default Changelist" comment="" />
-      <created>1619927927260</created>
+      <changelist id="4bd8873a-8f16-4722-89ab-bd55a6991dcb" name="Default Changelist" comment="" />
+      <created>1620274137315</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619927927260</updated>
-      <workItem from="1619927929858" duration="2686000" />
+      <updated>1620274137315</updated>
+      <workItem from="1620274138365" duration="782000" />
     </task>
     <servers />
   </component>
